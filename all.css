@@ -1,0 +1,87 @@
+body {
+    background-image:url(imges/backregester.jpeg) ;
+    background-size: cover;
+    background-attachment: fixed; /* هذا يجعل الصورة ثابتة أثناء التمرير */
+    background-repeat: no-repeat; /* لمنع تكرار الصورة */
+}
+    
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1vw; /* استخدم وحدة نسبية (10vw) بدلاً من بكسل */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #000000;
+    backdrop-filter: blur(0.1vw); /* استخدم وحدة نسبية (5vw) بدلاً من بكسل */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    width: 200px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    position: relative;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* تصميم زر submit بشكل مضيء نيون */
+input[type="submit"] {
+    background-color: #242024;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold; /* زيادة وزن النص */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(15, 126, 163);
+    box-shadow: 0 0 20px rgb(46, 203, 255); /* تأثير النيون عند التحريك بالماوس */
+}
+.new { color: rgb(0, 111, 180); text-decoration: none; }
+
+.p1{
+    background-color: #242024;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold; /* زيادة وزن النص */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
